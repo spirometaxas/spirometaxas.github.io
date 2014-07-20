@@ -424,15 +424,29 @@ a:focus {
   color: rgba(252, 249, 249, 0.83);
 }
 
-.carousel-caption p {
-  text-align: center;
-  font-weight: bold;
-  margin-left: 0px;
-  margin-bottom: 40px;
-  font-size: 15px;
-  line-height: 1.4;
-  max-width: 500px;
-  color: rgba(0, 0, 0, 0.83);
+@media (max-width: 767px) {
+  .carousel-caption p {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 500px;
+    color: rgba(0, 0, 0, 0.83);
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1500px) {
+  .carousel-caption p {
+    text-align: left;
+    margin-left: -50px;
+    margin-bottom: 80px;
+    font-size: 40px;
+    line-height: 1.4;
+    max-width: 500px;
+    color: rgba(4, 34, 103, 0.83);
+  }
 }
 
 @media (min-width: 767px) and (max-width: 1220px) {
@@ -499,20 +513,21 @@ a:focus {
     color: rgba(52, 136, 191, 0.77);
     background-color: transparent;
   }
+    
+  .carousel-caption p {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-bottom: 140px;
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 500px;
+    color: rgba(0, 0, 0, 0.83);
+  }
 }
 
 @media (min-width: 766px) {
-/* Bump up size of carousel content */
-  .carousel-caption p {
-    text-align: left;
-    margin-left: -50px;
-    margin-bottom: 80px;
-    font-size: 40px;
-    line-height: 1.4;
-    max-width: 500px;
-    color: rgba(4, 34, 103, 0.83);
-  }
-     
+/* Bump up size of carousel content */   
   .carousel-caption h2 {
     text-align: left;
     margin-bottom: 20px;
