@@ -515,14 +515,13 @@ a:focus {
   }
     
   .carousel-caption p {
-    text-align: center;
-    font-weight: bold;
-    margin-left: 0px;
-    margin-bottom: 140px;
-    font-size: 15px;
+    text-align: left;
+    margin-left: -50px;
+    margin-bottom: 180px;
+    font-size: 40px;
     line-height: 1.4;
     max-width: 500px;
-    color: rgba(0, 0, 0, 0.83);
+    color: rgba(4, 34, 103, 0.83);
   }
 }
 
