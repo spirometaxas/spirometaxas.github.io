@@ -564,7 +564,7 @@ a:focus {
     margin-bottom: 80px;
     font-size: 40px;
     line-height: 1.4;
-    max-width: 800px;
+    /*max-width: 800px;*/
     font-weight: bold;
     color: rgba(252, 249, 249, 0.83);
   }
