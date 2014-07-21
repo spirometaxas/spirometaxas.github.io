@@ -540,7 +540,7 @@ a:focus {
   .carousel-caption h3 {
     text-align: right;
     margin-bottom: 20px;
-    margin-right: -50px;
+    margin-right: 0px;
     font-size: 100px;
     line-height: 1.4;
     font-weight: bold;
@@ -560,7 +560,7 @@ a:focus {
     
   .carousel-caption h5 {
     text-align: right;
-    margin-right: -50px;
+    margin-right: 0px;
     margin-bottom: 80px;
     font-size: 40px;
     line-height: 1.4;
