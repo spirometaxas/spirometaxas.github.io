@@ -571,6 +571,7 @@ a:focus {
     max-width: 800px;
     font-weight: bold;
     color: rgba(252, 249, 249, 0.83);
+    float: right;
   }
 }
 
