@@ -45,6 +45,18 @@ h6 {
     1px 1px 0 #333;
 }
 
+@media(max-width:767px) {
+    h6 {
+        font-size: 30px;
+        color: #333;
+        text-shadow:
+        -1px -1px 0 #333,
+        1px -1px 0 #333,
+        -1px 1px 0 #333,
+        1px 1px 0 #333;
+    }
+}
+
 .titleHeight {
     height:83px;
     display: table;
