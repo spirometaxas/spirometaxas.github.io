@@ -1101,7 +1101,7 @@
     vertical-align: middle;
 }
 
-@media(max-width:767px) {
+@media(max-width:841px) {
     .letter {
         background: rgb(0, 183, 229);
         color: #fff;
@@ -1180,7 +1180,7 @@
     }
 }
 
-@media(min-width:767px) {
+@media(min-width:840px) {
     .letter {
         background: rgb(0, 183, 229);
         color: #fff;
