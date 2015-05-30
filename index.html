@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script type="text/javascript" id="cosymantecbfw_resize">var kvcPushDownExceptions = {};									var retryCSSHack = 0;									var isUrlExcepted = function() {										if(!window.location || !kvcPushDownExceptions) {											return false;										}										var result = false;										var path = kvcPushDownExceptions[window.location.host];										if(path) {											var patt = new RegExp(path, "i");											result = patt.test(window.location.pathname);										}										if (!result) {											var listRegExUrls = kvcPushDownExceptions["listRegExUrls"];											if (listRegExUrls) {												for (var i = 0; i < listRegExUrls.length; i++) {													var regexPattern = new RegExp(listRegExUrls[i], "i");													if (regexPattern.test(window.location.href)) {														return true;													}												}											}										}										return result;									};									document.addEventListener("initializeExceptionListEvent", function(e) {										if(!e || !e.detail) { 											return; 										} 										kvcPushDownExceptions = e.detail;									}, false);									var coAdjustToolbarHeight = function(h) { 									var e = document.getElementById("cosymantecbfw"); 									if(e) { 										var nOldHeight = 0;										if(window.getComputedStyle(e,null)) {											var height = window.getComputedStyle(e,null).getPropertyValue("height");											var oldHeight = height.replace("px", "");											nOldHeight = Number(oldHeight);											if(!isNaN(nOldHeight)) {												nOldHeight = 0;											}										}										if(document.readyState === "complete") {											applyCSSHack(nOldHeight, h);										} else {											window.addEventListener("onload", applyCSSHack(nOldHeight, h), false);										}										e.style.height = h + "px";										e.style.left = window.pageXOffset + "px";									}								};							var arrayElements = new Array();							var applyCSSHack = function( oldHeight, newHeight) {									if(isUrlExcepted()) {										return;									}									if(!document.body) {										if(retryCSSHack++ < 30) {											setTimeout(function() { applyCSSHack(oldHeight, newHeight); }, 100);										}										return;									}									arrayElements = new Array();									if(document.body.style) {										document.body.style.position = "relative";										var len = newHeight + "px";										document.body.style.setProperty("margin-top", len, "important");                                        document.body.style.setProperty("border", "1px solid transparent", "important");									}									walk(document.body);									for(var i = 0; i < arrayElements.length; i++) {										var elem = arrayElements[i];										if(null == window.getComputedStyle(elem,null)) {											continue;										}										var pos = window.getComputedStyle(elem,null).getPropertyValue("position");										if(pos !== "fixed") {											continue;										}										if(elem.parentNode == document.body) {											elem.style.position = "absolute";											continue;										}										var oldTop = window.getComputedStyle(elem,null).getPropertyValue("top");										oldTop = oldTop.replace("px", "");										var nOldTop = Number(oldTop);										if(!isNaN(nOldTop)) {											nOldTop = 0;										}										var top = nOldTop + (Number(newHeight) - Number(oldHeight));										if(elem.style) {											elem.style.top = top + "px";										}									}								};							var walk = function (elm) {								if(window.getComputedStyle(elm,null) && "auto" !== window.getComputedStyle(elm,null).getPropertyValue("top")) {									arrayElements.push(elm);								}								var node;								for (node = elm.firstChild; node; node = node.nextSibling) {									if (node.nodeType === 1) {										walk(node);									}								}							};</script>
+<!--<script type="text/javascript" id="cosymantecbfw_resize">var kvcPushDownExceptions = {};									var retryCSSHack = 0;									var isUrlExcepted = function() {										if(!window.location || !kvcPushDownExceptions) {											return false;										}										var result = false;										var path = kvcPushDownExceptions[window.location.host];										if(path) {											var patt = new RegExp(path, "i");											result = patt.test(window.location.pathname);										}										if (!result) {											var listRegExUrls = kvcPushDownExceptions["listRegExUrls"];											if (listRegExUrls) {												for (var i = 0; i < listRegExUrls.length; i++) {													var regexPattern = new RegExp(listRegExUrls[i], "i");													if (regexPattern.test(window.location.href)) {														return true;													}												}											}										}										return result;									};									document.addEventListener("initializeExceptionListEvent", function(e) {										if(!e || !e.detail) { 											return; 										} 										kvcPushDownExceptions = e.detail;									}, false);									var coAdjustToolbarHeight = function(h) { 									var e = document.getElementById("cosymantecbfw"); 									if(e) { 										var nOldHeight = 0;										if(window.getComputedStyle(e,null)) {											var height = window.getComputedStyle(e,null).getPropertyValue("height");											var oldHeight = height.replace("px", "");											nOldHeight = Number(oldHeight);											if(!isNaN(nOldHeight)) {												nOldHeight = 0;											}										}										if(document.readyState === "complete") {											applyCSSHack(nOldHeight, h);										} else {											window.addEventListener("onload", applyCSSHack(nOldHeight, h), false);										}										e.style.height = h + "px";										e.style.left = window.pageXOffset + "px";									}								};							var arrayElements = new Array();							var applyCSSHack = function( oldHeight, newHeight) {									if(isUrlExcepted()) {										return;									}									if(!document.body) {										if(retryCSSHack++ < 30) {											setTimeout(function() { applyCSSHack(oldHeight, newHeight); }, 100);										}										return;									}									arrayElements = new Array();									if(document.body.style) {										document.body.style.position = "relative";										var len = newHeight + "px";										document.body.style.setProperty("margin-top", len, "important");                                        document.body.style.setProperty("border", "1px solid transparent", "important");									}									walk(document.body);									for(var i = 0; i < arrayElements.length; i++) {										var elem = arrayElements[i];										if(null == window.getComputedStyle(elem,null)) {											continue;										}										var pos = window.getComputedStyle(elem,null).getPropertyValue("position");										if(pos !== "fixed") {											continue;										}										if(elem.parentNode == document.body) {											elem.style.position = "absolute";											continue;										}										var oldTop = window.getComputedStyle(elem,null).getPropertyValue("top");										oldTop = oldTop.replace("px", "");										var nOldTop = Number(oldTop);										if(!isNaN(nOldTop)) {											nOldTop = 0;										}										var top = nOldTop + (Number(newHeight) - Number(oldHeight));										if(elem.style) {											elem.style.top = top + "px";										}									}								};							var walk = function (elm) {								if(window.getComputedStyle(elm,null) && "auto" !== window.getComputedStyle(elm,null).getPropertyValue("top")) {									arrayElements.push(elm);								}								var node;								for (node = elm.firstChild; node; node = node.nextSibling) {									if (node.nodeType === 1) {										walk(node);									}								}							};</script>-->
 <script type="text/javascript" id="waxCS">var WAX = function () { var _arrInputs; return { getElement: function (i) { return _arrInputs[i]; }, setElement: function(i){ _arrInputs=i; } } }(); function waxGetElement(i) { return WAX.getElement(i); } function coSetPageData(t, d){ if('wax'==t) { WAX.setElement(d);} }</script>
     
 <head>
@@ -32,10 +32,186 @@
     <!-- Custom Theme CSS -->
     <link href="css/personalWebsite3.css" rel="stylesheet">
     <link href="css/Sidebar-6-4.css" rel="stylesheet">
+    <link href="css/photoEffect1.css" rel="stylesheet">
+    <link href="css/photoEffect2.css" rel="stylesheet">
+    <link href="css/photoEffect3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" href="css/loader.css" />
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    
+    <div class="loader-wrap">
+			<div class="loader">
+                <div class="keyboard">
+                    <div class="letterRowText">
+                        <div class="nameText">\:</div>
+                        <div class="nameText typeS">S</div>
+                        <div class="nameText typeP">P</div>
+                        <div class="nameText typeI">I</div>
+                        <div class="nameText typeR">R</div>
+                        <div class="nameText typeO">O</div>
+                        <div class="nameText"></div>
+                        <div class="nameText typeM">M</div>
+                        <div class="nameText typeE">E</div>
+                        <div class="nameText typeT">T</div>
+                        <div class="nameText typeA1">A</div>
+                        <div class="nameText typeX">X</div>
+                        <div class="nameText typeA2">A</div>
+                        <div class="nameText typeS2">S</div>
+                    </div>
+                <div class="letterRow">
+                    <div class="outline">
+                        <div class="letter">Q</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">W</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressE">E</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressR">R</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressT">T</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">Y</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">U</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressI">I</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressO">O</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressP">P</div>
+                    </div>
+                    
+                    <div class="outline">
+                        <div class="letter">{</div>
+                    </div>
+                    
+                    <div class="outline">
+                        <div class="letter">}</div>
+                    </div>
+                </div>
+                
+                <div class="letterRow">
+                    <div class="outline">
+                        <div class="letter pressA">A</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressS">S</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">D</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">F</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">G</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">H</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">J</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">K</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">L</div>
+                    </div>
+                    
+                    <div class="outline">
+                        <div class="letter">;</div>
+                    </div>
+                    
+                    <div class="outline">
+                        <div class="letter">'</div>
+                    </div>
+                </div>
+                
+                <div class="letterRow">
+                    <div class="outline">
+                        <div class="letter">Z</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressX">X</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">C</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">V</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">B</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">N</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter pressM">M</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">,</div>
+                    </div>
+
+                    <div class="outline">
+                        <div class="letter">.</div>
+                    </div>
+                    
+                    <div class="outline">
+                        <div class="letter">/</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="letterRow">
+                    <div class="spaceBarOutline">
+                        <div class="spaceBar pressSpace"></div>
+                    </div>
+                </div>
+                    
+                <div class="letterRowText">
+                    <div class="loadingText">Loading</div>
+                </div>
+            </div>
+			</div>
+		</div>
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -128,7 +304,7 @@
                 
             <hr class="featurette-divider">
 
-      <div class="information-section">
+      <div class="information-section container">
         <div class="row featurette">
           <div class="col-md-7">
             <h1 class="featurette-heading">Background <span class="text-muted"></span></h1>
@@ -153,14 +329,333 @@
         </div>
             
         <hr class="featurette-divider">
-
-        <div class="information-section">
         
-        <div id="wrapper">
+        <div class="information-section container">
+            
+            <!--<hr class="featurette-divider">
+            <hr class="featurette-divider">
+            <hr class="featurette-divider">-->
+            
+            <div class="row">
+                <div class="col-sm-4"> 
+                    <hr class="featurette-divider">
+                    <hr class="featurette-divider">
+                    <hr class="featurette-divider">
+                </div>
+                <div class="col-sm-4 titleHeight"><div class="centerTitle"><h6>WEBSITES</h6></div></div>
+                <div class="col-sm-4"> 
+                    <hr class="featurette-divider">
+                    <hr class="featurette-divider">
+                    <hr class="featurette-divider">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-1"> </div>
+                <!--<div class="col-sm-5">
+                    <h1>
+                        Penn Drones
+                    </h1>
+                    <div class="project">
+                        <div class="info">
+                    <img src="./img/PennDrones1.jpg" class="img-responsive"  alt="Penn Drones Website, a website Spiro designed for the club Penn Drones at the University of Pennsylvania." title="Penn Drones Website">
+                            </div>
+                    </div>
+
+                    <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </span><br>
+                </div> -->
+                <!-- START -->
+                
+                <div class="col-sm-5">
+                    <h1>
+                        Penn Drones
+                    </h1>
+                    
+                <div class="parent">
+                    <div class="child-left">
+                    <img src="./img/PennDrones1.jpg" class="img-responsive"  alt="Penn Drones Website, a website Spiro designed for the club Penn Drones at the University of Pennsylvania." title="Penn Drones Website">
+                    </div>
+                    
+                    <div class="child-right">
+                        <div class="centerText">
+                        <p><span class="darker">Tools: </span> html5, css3, javascript, jquery, bootstrap, skrollr plug-in <br><br>
+                            <a href="http://penndrones.com/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            
+                            <a href="https://github.com/penndrones/penndrones.github.io" class="effectBtn-default btn-lg" title="View Code"><span class="darker">>_</span></a>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                    <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </span><br>
+                </div>
+
+            <!-- END -->
+            
+                <!--<div class="col-sm-5">
+                    <h1>
+                        NSCS UPenn Chapter
+                    </h1>
+                    <img src="./img/NSCSWebsite1.png" class="img-responsive"  alt="NSCS Upenn Chapter Website, a website Spiro designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania." title="NSCS Upenn Chapter Website">
+                    
+                    <p class="justified">A formal website designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania.  The website background is taken from an open-source template, which was modified to include section tabs and easing animations.  </p>  </div>-->
+            
+            <!-- START -->
+            <div class="col-sm-5">
+                    <h1>
+                        NSCS UPenn Chapter
+                    </h1>
+                
+                <div class="parent">
+                    <div class="child-left">
+                    <img src="./img/NSCSWebsite1.png" class="img-responsive"  alt="NSCS Upenn Chapter Website, a website Spiro designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania." title="NSCS Upenn Chapter Website">
+                        </div>
+                    
+                    <div class="child-right">
+                        <div class="centerText">
+                        <p><span class="darker">Tools: </span> html5, css3, javascript, jquery, bootstrap<br><br>
+                            <a href="http://nscsupenn.github.io/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            
+                            <a href="https://github.com/nscsupenn/nscsupenn.github.io" class="effectBtn-default btn-lg" title="View Code"><span class="darker">>_</span></a>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <p class="justified">A formal website designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania.  The website background is taken from an open-source template, which was modified to include section tabs and easing animations.  </p>  </div>
+            
+            <!-- END -->
+            
+            
+                <div class="col-sm-1"> </div>
+            </div>
+        
+        <div class="row">
+            <div class="col-sm-4"> 
+                <hr class="featurette-divider">
+                <hr class="featurette-divider">
+                <hr class="featurette-divider">
+           </div>
+           <div class="col-sm-4 titleHeight"><div class="centerTitle"><h6>HACKATHON</h6></div></div>
+           <div class="col-sm-4"> 
+                <hr class="featurette-divider">
+                 <hr class="featurette-divider">
+                 <hr class="featurette-divider">
+           </div>
+        </div>
+            
+            
+            
+            <div class="row">
+                <div class="col-sm-1"> </div>
+                
+                <!--<div class="col-sm-5">
+                    <h1>
+                        CINEMAGIC
+                    </h1>
+                    <img src="./img/CinemagicImage1.png" class="img-responsive"  alt="Cinemagic, Spiro's project for Pennapps X 2014." title="CINEMAGIC">
+
+                    <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  <br> <span class="darker">CINEMAGIC won the "Best Use of Video" award at PennApps X</span><br>
+ 
+                </div> -->
+                <!--<span class="darker">Tools: </span> Node.js, Javascript, Java (Applet), Video Processing with OpenCV and Alchemy API</p>-->
+                
+                <!-- START -->
+                <div class="col-sm-5">
+                    <h1>
+                        CINEMAGIC
+                    </h1>
+                    
+                    <div class="parent1 cs-style-4">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/CinemagicImage1.png" class="img-responsive"  alt="Cinemagic, Spiro's project for Pennapps X 2014." title="CINEMAGIC"></div>
+                                <div class="test">
+                                    <p><span class="darker">Tools: </span> Java, Node.js, html5, css3, javascript <br><span class="darker">Image Processing: </span>Alchemy API, OpenCV
+                                    </p>
+                                    
+                                    <div class="buttons btn-group">
+                                    <a href="http://challengepost.com/software/cinemagic"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                            
+                                    <button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  <br> <span class="darker">CINEMAGIC won the "Best Use of Video" award at PennApps X</span><br>
+ 
+                </div> 
+                <!-- END -->
+                
+                
+                <div class="col-sm-5">
+                    <h1>
+                        TypeRight
+                    </h1>
+                    
+                    <div class="parent1 cs-style-4">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/TypeRightImage3.png" class="img-responsive"  alt="TypeRight, Spiro's project for PennApps Spring 2015." title="TypeRight"></div>
+                                <div class="test">
+                                    <p><span class="darker">Tools: </span> Java, Node.js, html5, css3, javascript, C++ <br><span class="darker">Database: </span>MongoDB <br> <span class="darker">Partner: </span> Chad Nachiappan
+                                    </p>
+                                    
+                                    <div class="buttons btn-group">
+                                    <a href="http://challengepost.com/software/type-right"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                            
+                                    <button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="justified">TypeRight is a web application aimed at strengthening password security.  TypeRight checks if the user types the correct password, but also if the typing of the keyboard matches the user's typing style, in an effort to detect a hacker.  TypeRight works by performing a statistical analysis on the latency times between keystrokes, and comparing the results to a record of the user's typing style that is stored to a database.  </p>  </div>
+                <div class="col-sm-1"> </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                    <h1>
+                        Kinect Vision Aid
+                    </h1>
+                    
+                    <div class="parent1 cs-style-4">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/KinectVisionAid4.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid"></div>
+                                <div class="test">
+                                    <p><span class="darker">Tools: </span> Java, C++ <br><span class="darker">APIs: </span>Alchemy, Kinect, Google <br> <span class="darker">Partner: </span> Changxu Lu
+                                    </p>
+                                    
+                                    <div class="buttons btn-group">
+                                    <a href="http://challengepost.com/software/kinect-vision-aid"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="justified">Kinect Vision Aid is an application that uses the Kinect RGB/Depth sensor to assist the visually imparied.  Kinect Vision Aid first uses the Kinect's depth measurements to audibly notify the user when he/she comes close to an object.  Additionally, the application uses image processing to verbally describe the appearance of nearby objects.  Kinect Vision Aid was presented at Dragon Hacks 2015.  </p> 
+                </div>
+                <div class="col-sm-5">
+                    <h1>
+                        MEALSTEAL
+                    </h1>
+                    
+                    <div class="parent1 cs-style-4">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/Mealsteal3.png" class="img-responsive"  alt="Mealsteal, Spiro's project for PennApps Spring 2014." title="MEALSTEAL"></div>
+                                <div class="test">
+                                    <p><span class="darker">Tools: </span> Java <br><span class="darker">APIs: </span>Google Maps, Facebook 
+                                    </p>
+                                    
+                                    <div class="buttons btn-group">
+                                    <a href="http://challengepost.com/software/type-right"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="justified">MEALSTEAL is a desktop application that informs users of nearby food locations.  The user is informed of nearby events that contain free food, and is provided with pictures and a map to the location.  Other users who have the app can post updates on current and new events that involve food.  I worked with three other students on the project, which was presented at PennApps Spring 2014.</p>  
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        
+        
+        <div class="row">
+            <div class="col-sm-4"> 
+                <hr class="featurette-divider">
+                <hr class="featurette-divider">
+                <hr class="featurette-divider">
+           </div>
+           <div class="col-sm-4 titleHeight"><div class="centerTitle"><h6>FOR CLASS</h6></div></div>
+           <div class="col-sm-4"> 
+                <hr class="featurette-divider">
+                 <hr class="featurette-divider">
+                 <hr class="featurette-divider">
+           </div>
+        </div>
+        
+        <div class="row">
+                <div class="col-sm-1"></div>
+            
+            
+                <div class="col-sm-5">
+                    <h1>
+                        Volunteer Tracking App
+                    </h1>
+                    
+                    <div class="parentEffect3 slide">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid"></div>
+                                
+                                <div class="test">
+				        <p><span class="darker">Tools: </span> Android, Java, Google API, Javascript<br><span class="darker"> Team: </span> Chad Nachiappan, Prakhar Bhandari, Shaurya Jain, Myself</p>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <p class="justified">An Android app designed for the Penn Working Dog Center built by three other students and I.  The app records and processes the hours of volunteers and interns at the center.  Data is stored to a database, emailed, and synced with a series of Google Spreadsheets.  </p> 
+                </div>
+            
+                <!--<div class="col-sm-5">
+                    <h1>
+                        Volunteer Tracking App
+                    </h1>
+                    <img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid">
+                    
+                    <p class="justified">An Android app designed for the Penn Working Dog Center built by three other students and I.  The app records and processes the hours of volunteers and interns at the center.  Data is stored to a database, emailed, and synced with a series of Google Spreadsheets.  </p> 
+                </div>-->
+                <div class="col-sm-5">
+                    <h1>
+                        RACER
+                    </h1>
+                    <!--<img src="./img/Racer3.jpg" class="img-responsive"  alt="Racer, Spiro's final project for CIS120." title="RACER">-->
+                    <div class="parentEffect3 slide">
+                        <div class="picture">
+                            <div class="outer">
+                                <div><img src="./img/Racer3.jpg" class="img-responsive"  alt="Racer, Spiro's final project for CIS120." title="RACER"></div>
+                                
+                                <div class="test">
+				        <p><span class="darker">Tools: </span> Java (Graphics2D, Swing)</p>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="justified">RACER is a console racing game composed of three levels.  The game offers an overhead 2D mode, and a 3D mode using rotation, translation, and perspective matricies to achieve the desired affect.  Points are awarded and deducted throughout the game, and high scores are recorded.  </p>  
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!--START-->
+
+        <!--<div class="information-section">-->
+        
+        <!--<div id="wrapper">-->
 
         <!-- Sidebar   -->
     
-        <div id="sidebar-wrapper" data-spy="scroll" data-target=".sidebar-nav">
+        <!--<div id="sidebar-wrapper" data-spy="scroll" data-target=".sidebar-nav">
             <div class="row">
             <ul class="sidebar-nav" id="sidebar2">
                 <div class="menu-button-press">
@@ -178,13 +673,13 @@
             </ul>
                 
             </div>
-        </div>
+        </div>-->
 
         <!-- Page content -->
-        <div id="page-content-wrapper">
+        <!--<div id="page-content-wrapper">-->
             
       
-            <div class="container">
+            <!--<div class="container">
                 
                 <section id="Cinemagic">
                     <hr class="featurette-divider">
@@ -252,14 +747,16 @@
                         
                     </section>
                     
-                </div>
+                </div>-->
 
-            </div>
+            <!--</div>-->
             
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>
             
-    </section>
+    </section>-->
+    
+    <!--END-->
         
 
     <section id="contact" class="text-center">
@@ -270,8 +767,8 @@
                 
     <hr class="featurette-divider">
 
-      <div class="information-section-contact">
-        <div class="row featurette">
+      <div class="information-section-contact container">
+        <!--<div class="row featurette">
 
           <ul class="list-inline banner-social-buttons">
                     <li><a href="https://facebook.com" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
@@ -283,7 +780,108 @@
             </ul>
             <p><br><br>&copy; 2014 Spiro Metaxas</p>
 
+        </div>-->
+          
+          <div class="container" id="info">
+            <div class="row">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8">
+                      <div class="parent-contact">
+                          <div class="child-left-contact">
+                              <img src="img/iPhone.png" class="img-responsive">
+                          </div>
+                          
+                          <div class="child-right-background">
+                          </div>
+                          
+                          <div class="child-right-contact">
+                              <div class="buttonSpace" id="apps">
+                                  <a href="https://www.facebook.com/people/Spiro-Metaxas/100004540996111"> <button class="appButton">
+                                      <img src="img/facebook-logo2.png" class="img-responsive tapApp"> Facebook
+                                  </button> </a>
+                                  
+                                  <a href="https://www.linkedin.com/pub/spiro-metaxas/99/957/554"> <button class="appButton"> 
+                                      <img src="img/linkedin-logo2.png" class="img-responsive tapApp"> Linkedin
+                                  </button> </a>
+                                  
+                                  <a href="https://plus.google.com/114163671896480645682/posts"> <button class="appButton">
+                                      <img src="img/googleplusLogo2.png" class="img-responsive tapApp"> Google+
+                                  </button> </a>
+                                  
+                                  <a href="https://github.com/spirometaxas"> <button class="appButton">
+                                      <img src="img/GithubLogo2.png" class="img-responsive tapApp"> Github
+                                  </button> </a>
+                              </div>
+                              
+                              
+                              <!-- Start -->
+                              
+                          </div>
+                          
+                          <div class="background" id="lockScreen">
+                              <div class="titleText">
+                                  <img src="img/iphonePassCode.png" class="img-responsive">
+                              </div>
+                              
+                              <div class="dot-row">
+                                  <div class="dot" id="dot1"></div>
+                                  <div class="dot" id="dot2"></div>
+                                  <div class="dot" id="dot3"></div>
+                                  <div class="dot" id="dot4"></div>
+                              </div>
+                
+                              <div class="number-row">
+                                  <div class="number" id="num1">
+                                      <img src="img/iPhoneNum1.png" class="img-responsive">
+                                  </div>
+                                  <div class="number" id="num2">
+                                      <img src="img/iPhoneNum2.png" class="img-responsive">
+                                  </div>
+                                  <div class="number" id="num3">
+                                      <img src="img/iPhoneNum3.png" class="img-responsive">
+                                  </div>
+                              </div>
+                
+                              <div class="number-row">
+                                  <div class="number" id="num4">
+                                      <img src="img/iPhoneNum4.png" class="img-responsive">
+                                  </div>
+                                  <div class="number">
+                                      <img src="img/iPhoneNum5.png" class="img-responsive">
+                                  </div>
+                                  <div class="number">
+                                      <img src="img/iPhoneNum6.png" class="img-responsive">
+                                  </div>
+                              </div>
+    
+                              <div class="number-row">
+                                  <div class="number">
+                                      <img src="img/iPhoneNum7.png" class="img-responsive">
+                                  </div>
+                                  <div class="number">
+                                      <img src="img/iPhoneNum8.png" class="img-responsive">
+                                  </div>
+                                  <div class="number">
+                                      <img src="img/iPhoneNum9.png" class="img-responsive">
+                                  </div>
+                              </div>
+
+                              <div class="number-row">
+                                  <div class="number">
+                                      <img src="img/iPhoneNum0.png" class="img-responsive">
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- END -->
+                          
+                      </div>
+                  </div>
+                  <div class="col-sm-2"></div>
+            </div>
         </div>
+          
+          <p>&copy; 2015 Spiro Metaxas</p>
+
       </div>
         
     </section>
@@ -307,9 +905,76 @@
         $("#menu-button").toggleClass("glyphicon-chevron-left");
     });
     </script>
-            
     
     <script type="text/javascript">
+            wasRun=false;
+            $(window).scroll(
+		    function(){
+			    scrollPos = $(this).scrollTop();
+                windowHeight=$(window).height();
+                aboutPos=$('#info').offset().top-windowHeight+300;
+                if(scrollPos>aboutPos && !wasRun){
+                    wasRun = true;
+                    $("#dot1").removeClass("dot");
+                    $("#dot1").addClass("pressDot");
+                    $("#num1").addClass("pressNumber");
+                    
+                    setTimeout(function(){
+                        $("#num1").removeClass("pressNumber");
+                    }, 250);
+                    
+                    setTimeout(function(){
+                        $("#dot2").removeClass("dot");
+                        $("#dot2").addClass("pressDot");
+                        $("#num2").addClass("pressNumber");
+                    }, 500);
+                    
+                    setTimeout(function(){
+                        $("#num2").removeClass("pressNumber");
+                    }, 750);
+                    
+                    setTimeout(function(){
+                        $("#dot3").removeClass("dot");
+                        $("#dot3").addClass("pressDot");
+                        $("#num3").addClass("pressNumber");
+                    }, 1000);
+                    
+                    setTimeout(function(){
+                        $("#num3").removeClass("pressNumber");
+                    }, 1250);
+                    
+                    setTimeout(function(){
+                        $("#dot4").removeClass("dot");
+                        $("#dot4").addClass("pressDot");
+                        $("#num4").addClass("pressNumber");
+                    }, 1500);
+                    
+                    setTimeout(function(){
+                        $("#num4").removeClass("pressNumber");
+                    }, 1750);
+                    
+                    $("#lockScreen").delay(1750).fadeOut("slow", function () { $(this).remove() }); 
+                    $("#apps").delay(1900).animate({ 'marginTop': "0px" }, 'fast');
+	             }
+            });
+        </script>
+    
+        <script type="text/javascript">
+			$(window).load(function() {
+				$(".loader-wrap").delay(4000).fadeOut("slow");
+			})
+		</script>
+    
+    <!--<script type="text/javascript">
+        function () {
+            $('.carousel').carousel({
+                interval: 20000
+            });
+        });
+    </script>-->
+            
+    
+    <!--<script type="text/javascript">
     $(function() {
         $('#sidebar-wrapper').height($("#sidebar2").height());
     
@@ -317,7 +982,7 @@
             offset: { top: $('#sidebar2').offset().top, bottom: $('#contact').outerHeight(true) }
         });    
     });
-    </script>
+    </script>-->
     
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

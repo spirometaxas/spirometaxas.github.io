@@ -1,0 +1,145 @@
+.slide .picture {
+	-webkit-perspective: 1700px;
+	-moz-perspective: 1700px;
+	perspective: 1700px;
+	/*-webkit-perspective-origin: 0 50%;
+	-moz-perspective-origin: 0 50%;
+	perspective-origin: 0 50%;*/
+}
+
+.slide .outer {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    
+    overflow: hidden;
+}
+
+.slide .outer > div {
+	overflow: hidden;
+}
+
+.slide .outer img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.slide .outer:hover img {
+	-webkit-transform: translateY(-15%);
+	-moz-transform: translateY(-15%);
+	-ms-transform: translateY(-15%);
+	transform: translateY(-15%);
+}
+
+.slide .test {
+	height: 50%;
+	width: 100%;
+	opacity: 1;
+    /*bottom: 0%;*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+    -webkit-transform: translateY(200%);
+	-moz-transform: translateY(200%);
+	transform: translateY(200%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.slide .outer:hover .test {
+	opacity: 1; 
+    -webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.slide .test a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+
+.parent2Effect3 {
+    padding:20px;
+    width:50%;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 {
+	max-width: 100%;
+	list-style: none;
+	text-align: center;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .picture {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	text-align: left;
+	position: relative;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .outer {
+	margin: 0;
+	position: relative;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .outer img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .test {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #000;
+	color: #000;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .test h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .test span:before {
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .test a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+    
+    /*-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;*/
+}
+
+.parentEffect3 .test p {
+    color: #fff;
+}
