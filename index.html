@@ -20,6 +20,8 @@
     <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://spirometaxas.github.io/" />
 
     <title>Spiro Metaxas - Personal Website</title>
+    
+    <link rel="shortcut icon" href="img/SMLogo2.png">
 
     <!-- Bootstrap Core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -31,12 +33,13 @@
 
     <!-- Custom Theme CSS -->
     <link href="css/personalWebsite3.css" rel="stylesheet">
-    <link href="css/Sidebar-6-4.css" rel="stylesheet">
+    <!--<link href="css/Sidebar-6-4.css" rel="stylesheet">-->
     <link href="css/photoEffect1.css" rel="stylesheet">
     <link href="css/photoEffect2.css" rel="stylesheet">
     <link href="css/photoEffect3.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" href="css/loader.css" />
+    <link href="css/particlesBackground.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -246,6 +249,9 @@
     </nav>
     
     <section class="introduction">
+        
+    <div id="particles-js"></div>    
+        
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -254,7 +260,7 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="item active">
+        <div class="item photoBackground active">
             <img src="./img/firstSlidePicture.jpg" alt="Spiro Metaxas, an undergraduate computer science major at the University of Pennsylvania." title="Spiro Metaxas">
           <div class="container">
             <div class="carousel-caption">
@@ -275,9 +281,6 @@
           </div>
         </div>
         <div class="item">
-          <div class="other">
-            <img src="./img/slide3background3.png" alt="Third slide">
-          </div>
           <div class="container">
             <div class="carousel-caption">
               <h3>Thinker</h3>
@@ -286,8 +289,8 @@
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="font-size: 3.2em;"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="font-size: 3.2em;"></span></a>
     </div><!-- /.carousel -->
     </section>
     
@@ -315,7 +318,6 @@
             <p class="lead">I have experience working with Java, C++, OCaml, Python, and LaTeX.  I also have experience with front-end web development using HTML, CSS, and Javascript.  Additionally, I have worked with graphics tools such as Maya, Houdini, and QT.   </p>
         </div>
         <div class="col-md-5">
-          <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="./img/aboutPicture.JPG">-->
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" width="892" height="1125" alt="Spiro Metaxas, graduation photo.  Spiro graduated from Upper Darby High School in 2013." src="./img/aboutPicture.JPG" title="Spiro Metaxas - Graduation photo">
         </div>
         </div>
@@ -332,11 +334,7 @@
         
         <div class="information-section container">
             
-            <!--<hr class="featurette-divider">
-            <hr class="featurette-divider">
-            <hr class="featurette-divider">-->
-            
-            <div class="row hidden-xs">
+            <div class="row hidden-xs hidden-sm">
                 <div class="col-sm-4"> 
                     <hr class="featurette-divider">
                     <hr class="featurette-divider">
@@ -350,7 +348,7 @@
                 </div>
             </div>
             
-            <div class="hidden-sm hidden-md hidden-lg">
+            <div class=" hidden-md hidden-lg">
                 <hr class="featurette-divider">
                 <h6>WEBSITES</h6>
                 <hr class="featurette-divider">
@@ -358,19 +356,6 @@
             
             <div class="row">
                 <div class="col-sm-1"> </div>
-                <!--<div class="col-sm-5">
-                    <h1>
-                        Penn Drones
-                    </h1>
-                    <div class="project">
-                        <div class="info">
-                    <img src="./img/PennDrones1.jpg" class="img-responsive"  alt="Penn Drones Website, a website Spiro designed for the club Penn Drones at the University of Pennsylvania." title="Penn Drones Website">
-                            </div>
-                    </div>
-
-                    <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </span><br>
-                </div> -->
-                <!-- START -->
                 
                 <div class="col-sm-5">
                     <h1>
@@ -401,17 +386,6 @@
                     <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </span><br>
                 </div>
 
-            <!-- END -->
-            
-                <!--<div class="col-sm-5">
-                    <h1>
-                        NSCS UPenn Chapter
-                    </h1>
-                    <img src="./img/NSCSWebsite1.png" class="img-responsive"  alt="NSCS Upenn Chapter Website, a website Spiro designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania." title="NSCS Upenn Chapter Website">
-                    
-                    <p class="justified">A formal website designed for the National Society of Collegiate Scholars Chapter at the University of Pennsylvania.  The website background is taken from an open-source template, which was modified to include section tabs and easing animations.  </p>  </div>-->
-            
-            <!-- START -->
             <div class="col-sm-5">
                     <h1>
                         NSCS UPenn Chapter
@@ -446,7 +420,7 @@
                 <div class="col-sm-1"> </div>
             </div>
         
-        <div class="row hidden-xs">
+        <div class="row hidden-xs hidden-sm">
             <div class="col-sm-4"> 
                 <hr class="featurette-divider">
                 <hr class="featurette-divider">
@@ -460,7 +434,7 @@
            </div>
         </div>
         
-        <div class="hidden-sm hidden-md hidden-lg">
+        <div class="hidden-md hidden-lg">
             <hr class="featurette-divider">
             <h6>HACKATHON</h6>
             <hr class="featurette-divider">
@@ -471,18 +445,6 @@
             <div class="row">
                 <div class="col-sm-1"> </div>
                 
-                <!--<div class="col-sm-5">
-                    <h1>
-                        CINEMAGIC
-                    </h1>
-                    <img src="./img/CinemagicImage1.png" class="img-responsive"  alt="Cinemagic, Spiro's project for Pennapps X 2014." title="CINEMAGIC">
-
-                    <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  <br> <span class="darker">CINEMAGIC won the "Best Use of Video" award at PennApps X</span><br>
- 
-                </div> -->
-                <!--<span class="darker">Tools: </span> Node.js, Javascript, Java (Applet), Video Processing with OpenCV and Alchemy API</p>-->
-                
-                <!-- START -->
                 <div class="col-sm-5">
                     <h1>
                         CINEMAGIC
@@ -499,7 +461,7 @@
                                     <div class="buttons btn-group">
                                     <a href="http://challengepost.com/software/cinemagic"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button>
+                                    <a href="https://www.youtube.com/watch?v=KuUpS4TfJsc"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button></a>
                                     </div>
                                 </div>
                             </div>
@@ -513,9 +475,7 @@
 
                     <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  <br> <span class="darker">CINEMAGIC won the "Best Use of Video" award at PennApps X</span><br>
  
-                </div> 
-                <!-- END -->
-                
+                </div>   
                 
                 <div class="col-sm-5">
                     <h1>
@@ -533,7 +493,7 @@
                                     <div class="buttons btn-group">
                                     <a href="http://challengepost.com/software/type-right"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button>
+                                    <a href="https://www.youtube.com/watch?v=VaRUQCRiUpE"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button> </a>
                                     </div>
                                 </div>
                             </div>
@@ -610,7 +570,7 @@
             </div>
         
         
-        <div class="row hidden-xs">
+        <div class="row hidden-xs hidden-sm">
             <div class="col-sm-4"> 
                 <hr class="featurette-divider">
                 <hr class="featurette-divider">
@@ -624,7 +584,7 @@
            </div>
         </div>
         
-        <div class="hidden-sm hidden-md hidden-lg">
+        <div class="hidden-md hidden-lg">
             <hr class="featurette-divider">
             <h6>FOR CLASS</h6>
             <hr class="featurette-divider">
@@ -658,19 +618,11 @@
                     <p class="justified">An Android app designed for the Penn Working Dog Center built by three other students and I.  The app records and processes the hours of volunteers and interns at the center.  Data is stored to a database, emailed, and synced with a series of Google Spreadsheets.  </p> 
                 </div>
             
-                <!--<div class="col-sm-5">
-                    <h1>
-                        Volunteer Tracking App
-                    </h1>
-                    <img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid">
-                    
-                    <p class="justified">An Android app designed for the Penn Working Dog Center built by three other students and I.  The app records and processes the hours of volunteers and interns at the center.  Data is stored to a database, emailed, and synced with a series of Google Spreadsheets.  </p> 
-                </div>-->
                 <div class="col-sm-5">
                     <h1>
                         RACER
                     </h1>
-                    <!--<img src="./img/Racer3.jpg" class="img-responsive"  alt="Racer, Spiro's final project for CIS120." title="RACER">-->
+
                     <div class="parentEffect3 slide hidden-xs">
                         <div class="picture">
                             <div class="outer">
@@ -694,117 +646,6 @@
         </div>
         
     </section>
-    
-    <!--START-->
-
-        <!--<div class="information-section">-->
-        
-        <!--<div id="wrapper">-->
-
-        <!-- Sidebar   -->
-    
-        <!--<div id="sidebar-wrapper" data-spy="scroll" data-target=".sidebar-nav">
-            <div class="row">
-            <ul class="sidebar-nav" id="sidebar2">
-                <div class="menu-button-press">
-                    <a id="menu-toggle2" href="#" class="btn btn-menu visible-xs"><span class="glyphicon glyphicon-chevron-right" id="menu-button"></span><i class="icon-reorder"></i></a>
-                </div>
-                <li class="page-scroll">
-                    <a href="#Cinemagic"><span class="glyphicon glyphicon-th"> CINEMAGIC</span></a>
-                </li>
-                <li class="page-scroll">
-                    <a href="#Mealsteal"><span class="glyphicon glyphicon-th"> MEALSTEAL</span></a>
-                </li>
-                <li class="page-scroll">
-                    <a href="#Racer"><span class="glyphicon glyphicon-th">  RACER</a>
-                </li>
-            </ul>
-                
-            </div>
-        </div>-->
-
-        <!-- Page content -->
-        <!--<div id="page-content-wrapper">-->
-            
-      
-            <!--<div class="container">
-                
-                <section id="Cinemagic">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                    
-                    <div class="row featurette">
-                        <div class="col-md-10">
-                    <h1>
-                        CINEMAGIC
-                    </h1>
-                            
-                        <div class="visible-xs visible-sm visible-md">
-                            <img src="./img/CINEMAGIC.png" class="img-responsive" width="1331" height="709" alt="Cinemagic, Spiro's project for Pennapps X 2014." title="CINEMAGIC">
-                        </div>
-                            
-                        <div class="visible-lg">
-                            <object width="840" height="630" 
-                                data="https://www.youtube.com/v/KuUpS4TfJsc">
-                            </object>
-                        </div>
-
-                    <p>CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  Cinemagic was built using a web browser bookmarklet, a Node.js website, and a Java applet.  The main process works by using OpenCV API to process the frames, and Alchemy API to analyze each frame, and compare the results to the user's search request.  <br></p>
-                    <p><span class="darker"><a href="http://challengepost.com/software/cinemagic">CINEMAGIC</a> won the "Best Use of Video" award at PennApps X </span>
-                    </p>
-                        </div>
-                    </div>
-                    
-                    </section>
-                
-                <section id="Mealsteal">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                    
-                    <div class="row featurette">
-                        <div class="col-md-10">
-                    <h1>
-                        MEALSTEAL
-                    </h1>
-                            
-                        <img src="./img/Mealsteal2.png" class="img-responsive" width="1331" height="709" alt="Mealsteal, Spiro's project for PennApps Spring 2014." title="MEALSTEAL">
-
-                    <p>MEALSTEAL is a java-built desktop application that informs users of nearby food locations.  Facebook API is used to share location information, and Google Maps API is used to clearly display results.  I worked with three other students on the project, which was presented at PennApps Spring 2014.  </p>
-                        </div>
-                    </div>
-                    
-                    </section>
-                    
-                    <section id="Racer">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                    <hr class="featurette-divider">
-                        
-                    <div class="row featurette">
-                        <div class="col-md-10">
-                    <h1>RACER</h1>
-                            
-                        <img src="./img/Racer2.jpg" class="img-responsive" width="1279" height="741" alt="Racer, Spiro's final project for CIS120." title="RACER">
-                            
-                    <p>RACER is a java-built console racing game.  The game is composed of three levels, and records user high scores.  The game also offers a 2D mode using Java's Graphics2D library, and a 3D mode using rotation, translation, and perspective matricies to achieve the desired affect.  </p>
-                        </div>
-                    </div>
-                        
-                        
-                    </section>
-                    
-                </div>-->
-
-            <!--</div>-->
-            
-        <!--</div>-->
-    <!--</div>
-            
-    </section>-->
-    
-    <!--END-->
         
 
     <section id="contact" class="text-center">
@@ -942,6 +783,7 @@
 
     <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/personalWebsiteScripts.js"></script>
@@ -1021,6 +863,53 @@
             });
         });
     </script>-->
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+        
+            $('.carousel').carousel({
+                interval:5000,
+                pause: 'none'
+            });
+        
+        });
+        
+    </script>
+    
+    <script type="text/javascript">
+            particlesJS("particles-js", 
+                        {"particles":
+                         {"number":{"value":80,"density":{"enable":true,"value_area":800}},
+                          "color":{"value":"#ffffff"},
+                          "shape":{"type":"circle",
+                                   "stroke":{"width":0,"color":"#000000"},
+                                   "polygon":{"nb_sides":5},
+                                   "image":{"src":"http://spirometaxas.github.io/img/iPhoneNum0.png","width":100,"height":100}},
+                          "opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},
+                          "size":{"value":6,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},
+                          "line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},
+                          "move":{"enable":true,
+                                  "speed":6,
+                                  "direction":"none",
+                                  "random":false,
+                                  "straight":false,
+                                  "out_mode":"out",
+                                  "bounce":false,
+                                  "attract":{"enable":false,"rotateX":600,"rotateY":1200}}},
+                         "interactivity":{"detect_on":"window",
+                                          "events":{"onhover":{"enable":true,"mode":"grab"},
+                                                    "onclick":{"enable":false,"mode":"push"},
+                                                    "resize":true},
+                                          "modes":{"grab":{"distance":200,
+                                                           "line_linked":{"opacity":1}},
+                                                   "bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},
+                                                   "repulse":{"distance":200,"duration":0.4},
+                                                   "push":{"particles_nb":4},
+                                                   "remove":{"particles_nb":2}}},
+                         "retina_detect":true});
+        
+        </script>
             
     
     <!--<script type="text/javascript">

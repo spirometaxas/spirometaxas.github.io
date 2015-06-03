@@ -81,6 +81,20 @@ h2 {
     width: 100%;
 }
 
+@media (min-width: 767px) and (max-width:1067px) {
+    h2 {
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 100px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 0px;
+        padding-top: 30px;
+        color: #fff;
+        width: 100%;
+    }
+}
+
 @media(max-width:767px) {
     h2 {
         text-transform: uppercase;
@@ -94,6 +108,7 @@ h2 {
         width: 100%;
     }
 }
+
 
 h1 {
     text-transform: uppercase;
@@ -412,8 +427,11 @@ a:focus {
     height: 700px; 
     background-size: contain;
     vertical-align: top;
-    background-image: url(../img/DSC00094-Space2.png);
   }
+}
+
+.photoBackground {
+    background-image: url(../img/DSC00094-Space2.png);
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -449,7 +467,7 @@ a:focus {
     height: 600px; 
     background-size: contain;
     vertical-align: top;
-    background-image: url(../img/DSC00094-Space2.png);
+    /*background-image: url(../img/DSC00094-Space2.png);*/
   }
 }
 
@@ -581,7 +599,7 @@ a:focus {
     height: 900px; 
     background-size: contain;
     vertical-align: top;
-    background-image: url(../img/DSC00094-Space2.png);
+    /*background-image: url(../img/DSC00094-Space2.png);*/
   }
     
   .carousel-caption h1 {
