@@ -576,7 +576,7 @@ a:focus {
 
 @media (min-width: 1500px) {
   .carousel {
-    height: 900px;
+    height: 950px;
   }
     
   .carousel-inner > .item > img {
@@ -584,7 +584,7 @@ a:focus {
     top: 0;
     right: 0;
     min-width: none;
-    height: 900px; 
+    height: 950px; 
   }
     
   .carousel-inner > .item > .other > img {
@@ -592,11 +592,11 @@ a:focus {
     top: 0;
     right: 0;
     width: 100%;
-    height: 900px; 
+    height: 950px; 
   }
     
   .carousel .item {
-    height: 900px; 
+    height: 950px; 
     background-size: contain;
     vertical-align: top;
     /*background-image: url(../img/DSC00094-Space2.png);*/

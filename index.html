@@ -35,6 +35,7 @@
     <!-- Custom Theme CSS -->
     <link href="css/personalWebsite3.css" rel="stylesheet">
     <!--<link href="css/Sidebar-6-4.css" rel="stylesheet">-->
+    <link href="css/polygonCSS.css" rel="stylesheet" type="text/css">
     <link href="css/photoEffect1.css" rel="stylesheet">
     <link href="css/photoEffect2.css" rel="stylesheet">
     <link href="css/photoEffect3.css" rel="stylesheet">
@@ -271,9 +272,18 @@
           </div>
         </div>
         <div class="item">
-          <div class="other">
+          <!--<div class="other">
             <img src="./img/slide2background.jpg" alt="Second slide">
+          </div>-->
+          <div class="other">
+            <img src="./img/PolyBackground.png" alt="Second slide">
           </div>
+            
+          <div id="container" class="container2">
+            <div id="output" class="container2">
+            </div>
+          </div>    
+            
           <div class="container">
             <div class="carousel-caption">
               <h2>Innovator</h2>
@@ -603,7 +613,7 @@
                     <div class="parentEffect3 slide hidden-xs">
                         <div class="picture">
                             <div class="outer">
-                                <div><img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid"></div>
+                                <div><img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Volunteer Tracking App, Spiro's team project for CIS350." title="Volunteer Tracking App"></div>
                                 
                                 <div class="test">
 				        <p><span class="darker">Tools: </span> Android, Java, Google API, Javascript<br><span class="darker"> Team: </span> Chad Nachiappan, Prakhar Bhandari, Shaurya Jain, Myself</p>
@@ -613,7 +623,7 @@
                     </div>
                     
                 <div class="hidden-sm hidden-md hidden-lg">
-                    <img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Kinect Vision Aid, Spiro's project for Dragon Hacks 2015." title="Kinect Vision Aid">
+                    <img src="./img/TabletVolunteerTrackingApp1.png" class="img-responsive"  alt="Volunteer Tracking App, Spiro's team project for CIS350." title="Volunteer Tracking App">
                 </div>
                     
                     <p class="justified">An Android app designed for the Penn Working Dog Center built by three other students and I.  The app records and processes the hours of volunteers and interns at the center.  Data is stored to a database, emailed, and synced with a series of Google Spreadsheets.  </p> 
@@ -779,12 +789,14 @@
 
     <!-- Core JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- Animation Libraries -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/fss.min.js"></script>
+    <script src="js/example.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/personalWebsiteScripts.js"></script>
@@ -876,6 +888,35 @@
         
         });
         
+    </script>
+    
+    <script type="text/javascript">
+        var occur = false;
+        var currentIndex = 0;
+        
+        var difSize = false;
+
+            $('.carousel').bind('slid', function (e) {
+                if (!occur) {
+                    //test();
+                    initialise();
+                    occur = true;
+                }
+                
+                currentIndex = $('div.active').index();
+                
+                if (difSize && currentIndex == 1) {
+                    resize(container.offsetWidth, container.offsetHeight);
+                    render();
+                    difSize = false;
+                }
+                
+            });
+        
+        
+        $( window ).resize(function() {
+            difSize = true;
+        });
     </script>
     
     <script type="text/javascript">

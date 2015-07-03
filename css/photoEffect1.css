@@ -67,11 +67,10 @@
 
 /* Drop in text */
 .parent .child-right .centerText p {
-	display: table-cell;
+	display: table;
 	font-size: 1.5em;
 	/*position: relative;*/
 	top: -40px;
-	width: 100%;
 	-webkit-transition: all 300ms ease-out;
 	-moz-transition: all 300ms ease-out;
 	transition: all 300ms ease-out;
@@ -79,6 +78,10 @@
     margin-left:auto;
     margin-right:auto;
     text-align:center;
+}
+
+.centerText p {
+    text-align: center;
 }
 
 .parent .child-right .centerText {
@@ -128,6 +131,8 @@
     border: 1px solid #fff;
     color: #fff;
     background-color: transparent;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .effectBtn-default:hover,
