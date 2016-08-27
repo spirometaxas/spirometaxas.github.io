@@ -132,6 +132,36 @@ p {
     }
 }
 
+@media (min-width: 800px) and (max-width:1000px) {
+    .lead {
+        font-size: 13px !important;
+    }
+}
+
+@media (min-width: 1000px) and (max-width:1100px) {
+    .lead {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 1100px) and (max-width:1200px) {
+    .lead {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1300px) {
+    .lead {
+        font-size: 19px !important;
+    }
+}
+
+@media (min-width: 1300px) and (max-width:1400px) {
+    .lead {
+        font-size: 20px !important;
+    }
+}
+
 .justified {
     text-align: justify;
     text-justify: inter-word;
