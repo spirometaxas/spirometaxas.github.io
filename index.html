@@ -10,7 +10,7 @@
                                      initial-scale=1.0, 
                                      maximum-scale=1.0, 
                                      user-scalable=no">
-    <meta name="description" content="This is my online portfolio featuring various projects I have created as a college student.  ">
+    <meta name="description" content="Spiro Metaxas is a software developer who likes building cool things. This is his online project portfolio.">
     <meta name="author" content="Spiro Metaxas">
     <meta name="title" content="Spiro Metaxas - Personal Website">
     <meta http-equiv="Content-Language" content="en">
@@ -24,10 +24,12 @@
     <link rel="shortcut icon" href="img/SMLogo2.png">
 
     <!-- Bootstrap Core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fonts -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -40,6 +42,7 @@
     <link href="css/photoEffect3.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/animate-scroll.css" />
     <link href="css/particlesBackground.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -223,7 +226,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">
+                <a class="navbar-brand navbar-text-shadow" href="#page-top">
                     <span class="light">SPIRO</span> METAXAS
                 </a>
             </div>
@@ -236,13 +239,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about" class="navbar-text-shadow">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#download">Projects</a>
+                        <a href="#skills" class="navbar-text-shadow">Skills</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#download" class="navbar-text-shadow">Projects</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" class="navbar-text-shadow">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -253,23 +259,43 @@
         
     <div id="particles-js"></div>    
         
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="item photoBackground active">
-            <img src="./img/firstSlidePicture.jpg" alt="Spiro Metaxas, an undergraduate computer science major at the University of Pennsylvania." title="Spiro Metaxas">
+            <img src="./img/firstSlidePicture.JPG" alt="Spiro Metaxas, a software engineer who likes building cool things." title="Spiro Metaxas">
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption first-slide-caption">
               <h1>Developer</h1>
-              <p>I am currently a computer science major at the University of Pennsylvania.</p>
+              <p>I am a software developer who likes building cool things.</p>
             </div>
           </div>
         </div>
+
+
+        <div class="item photoBackground">
+            <div class="skyline hidden-xs hidden-sm">
+                <img src="./img/skylinePhoto.JPG" alt="Spiro Metaxas, Philadelphia skyline photo" title="Spiro Metaxas">
+            </div>
+            <div class="skyline-sm hidden-md hidden-lg">
+                <img src="./img/skylinePhoto.JPG" alt="Spiro Metaxas, Philadelphia skyline photo" title="Spiro Metaxas">
+            </div>
+          <div class="container">
+            <div class="carousel-caption carousel-caption-skyline">
+              <h1>Designer</h1>
+              <p>I believe software products must be both functionally and aesthetically pleasing.</p>
+              <!-- <p>I am always searching to learn new topics.</p> -->
+            </div>
+          </div>
+        </div>
+
+
         <div class="item">
           <!--<div class="other">
             <img src="./img/slide2background.jpg" alt="Second slide">
@@ -284,17 +310,19 @@
           </div>    
             
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption third-carousel-caption">
               <h2>Innovator</h2>
-              <h4>I enjoy looking into the newest technologies and exploring their potential.  </h4>
+              <h4 class="hidden-sm hidden-md hidden-lg">I enjoy looking into the newest technologies and exploring their potential.  </h4>
+              <h4 id="slide-3-description" class="hidden-xs">I enjoy looking into the newest technologies and exploring their potential.  </h4>
             </div>
           </div>
         </div>
         <div class="item">
           <div class="container">
-            <div class="carousel-caption">
+            <div class="carousel-caption fourth-carousel-caption">
               <h3>Thinker</h3>
-              <h5>I am particularly interested in applying mathematics to the potential of computer science to help solve problems. </h5>
+              <h5 class="hidden-sm hidden-md hidden-lg">I am particularly interested in applying mathematics to the potential of computer science to help solve problems. </h5>
+              <h5 id="slide-4-description" class="hidden-xs">I am particularly interested in applying mathematics to the potential of computer science to help solve problems. </h5>
             </div>
           </div>
         </div>
@@ -304,9 +332,21 @@
     </div><!-- /.carousel -->
     </section>
     
-    <div class="page-scroll">
+    <!-- <div class="page-scroll down-arrow hidden-xs">
         <a href="#about" class="btn btn-circle">
             <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </div>
+
+    <div class="page-scroll hidden-xs">
+        <a href="#about" class="down-arrow-container">
+            <i class="fa fa-chevron-down animated shadow-on-arrow"></i>
+        </a>
+    </div> -->
+
+    <div class="page-scroll hidden-xs">
+        <a href="#about" class="down-arrow-container">
+            <i class="glyphicon glyphicon-chevron-down animated shadow-on-arrow"></i>
         </a>
     </div>
 
@@ -319,19 +359,97 @@
 
       <div class="information-section container">
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-7 page-scroll">
             <h1 class="featurette-heading">Background <span class="text-muted"></span></h1>
-            <p class="lead">I am a computer programmer from Upper Darby, Pennsylvania.  I graduated from Upper Darby High School in the class of 2013, and am currently a submatriculating master's student at the University of Pennsylvania studying computer science.  I received my bachelor's degree in computer science from the University of Pennsylvania in May of 2017 along with a minor in mathematics.</p>
+            <p class="lead">I am a software engineer from Upper Darby, Pennsylvania.  I graduated from <a href="https://www.upperdarbysd.org/udhs" target="_blank" class="highlighted-text">Upper Darby High School</a> in the class of 2013, and was awarded a Mendenhall-Tyson Scholarship.  I received my bachelor's degree in computer science from the <a href="https://www.upenn.edu/" target="_blank" class="highlighted-text">University of Pennsylvania</a> in May of 2017 along with a minor in mathematics.  I submatriculated and received my master's degree in computer science from the <a href="https://www.upenn.edu/" target="_blank" class="highlighted-text">University of Pennsylvania</a> in December of 2017.</p>
             <h1 class="featurette-heading">Interests <span class="text-muted"></span></h1>
-            <p class="lead">I am particularly interested in applying programming to mathematics to help identify new patterns and relations that can ultimately be used to solve problems.  My main interest is software development, but I also enjoy mobile app development, computer vision, and web design.  In my spare time, I also enjoy playing the violin and helping the community.  </p>
+            <p class="lead">I am particularly interested in applying programming to mathematics to help identify new patterns and relations that can ultimately be used to solve problems.  My main interest is back-end software development, but I also enjoy mobile app development, computer vision, and web design.  In my spare time, I also enjoy playing the violin and helping the community.  </p>
             <h1 class="featurette-heading">Experience <span class="text-muted"></span></h1>
-            <p class="lead">I have experience working with Java, Scala, Python, C, C++, OCaml, Matlab, and industry tools such as AWS, Hadoop, MongoDB, SQL, DynamoDB, and S3.  I also have experience with mobile development in Swift and Java, front-end web development using HTML, CSS, and Javascript, and back-end web development in Python (Django), Java, and Scala.   </p>
+            <p class="lead">I have knowledge of numerous languages in both <a href="#skills" class="highlighted-text">back-end</a> and <a href="#skills" class="highlighted-text">front-end</a> software development.  I have experience writing code in industry as a software engineer, in a startup as a co-founder, in the lab as a university research assistant, and in hackathons for fun.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" width="892" height="1125" alt="Spiro Metaxas, graduation photo.  Spiro graduated from Upper Darby High School in 2013." src="./img/aboutPicture.JPG" title="Spiro Metaxas - Graduation photo">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Spiro Metaxas, graduation photo.  Spiro graduated from the University of Pennsylvania in 2017." src="./img/PennGraduationPhoto.JPG" title="Spiro Metaxas - Graduation photo">
         </div>
         </div>
       </div>
+    </section>
+
+    <section id="skills" class="text-center">
+        <div class="container">
+            <h2>SKILLS</h2>
+        </div>
+                
+        <hr class="featurette-divider">
+
+        <div class="information-section container">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive" alt="Spiro Metaxas, professional photo." src="./img/SpiroMetaxasPhoto.JPG" title="Spiro Metaxas - Photo">
+                </div>
+                <div class="col-md-7">
+                    <br>
+                    <div class="hidden-xs hidden-sm">
+                        <div class="row" id="typingSection">
+                            <div class="col-md-4 text-left">
+                                <h1 class="skills-header featurette-heading">Back-End<span class="text-muted"></span></h1>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="Java">Java</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="Python">Python</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="NodeJS">NodeJS</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="C/C++">C/C++</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="Scala">Scala</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/wrench.png"> <span data="Matlab">Matlab</span></p>
+                            </div>
+                            <div class="col-md-4 text-left">
+                                <h1 class="skills-header featurette-heading">Front-End<span class="text-muted"></span></h1>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/pencil.png"> <span data="HTML">HTML</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/pencil.png"> <span data="CSS">CSS</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/pencil.png"> <span data="Javascript">Javascript</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/phone.png"> <span data="iOS (Swift)">iOS (Swift)</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/phone.png"> <span data="Android (Java)">Android (Java)</span></p>
+                            </div>
+                            <div class="col-md-4 text-left">
+                                <h1 class="skills-header featurette-heading">Tools<span class="text-muted"></span></h1>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/unix.png"> <span data="Unix">Unix</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/cloud.png"> <span data="AWS">AWS</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/cloud.png"> <span data="Docker">Docker</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/gear.png"> <span data="Concourse">Concourse</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/database.png"> <span data="SQL">SQL</span></p>
+                                <p class="lead skills typingLoad"> <img class="imageIcon" src="./img/icons/database.png"> <span data="MongoDB">MongoDB</span></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row text-center">
+                            <div class="badge-container">
+                                <a href="https://www.youracclaim.com/badges/62c61099-c42f-4f31-85d3-ee510196be13/public_url" target="_blank">
+                                    <img class="badge-inner" src="./img/oracle-certified-associate-java-se-8-programmer.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden-md hidden-lg">
+                        <div class="row">
+                            <h1 class="featurette-heading">Back-End<span class="text-muted"></span></h1>
+                            <p class="lead"> Java, Python, NodeJS, C/C++, Scala, Matlab</p>
+                            <br>
+                            <h1 class="featurette-heading">Front-End<span class="text-muted"></span></h1>
+                            <p class="lead"> HTML, CSS, Javascript, iOS (Swift), Android (Java)</p>
+                            <br>
+                            <h1 class="featurette-heading">Tools<span class="text-muted"></span></h1>
+                            <p class="lead"> Unix, AWS, Docker, Concourse, SQL, MongoDB</p>
+                            <br><br>
+                            <div class="row text-center">
+                                <div class="badge-container">
+                                    <a href="https://www.youracclaim.com/badges/62c61099-c42f-4f31-85d3-ee510196be13/public_url" target="_blank">
+                                        <img class="badge-inner" src="./img/oracle-certified-associate-java-se-8-programmer.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="download" class="text-center">
@@ -365,7 +483,7 @@
             </div>
             
             <!-- WEBSITES ROW 1 START -->
-            <div class="row">
+            <div class="row scrollpoint">
                 <div class="col-sm-1"> </div>
                 
                 <div class="col-sm-5">
@@ -381,9 +499,9 @@
                     <div class="child-right">
                         <div class="centerText">
                         <p><span class="darker">Tools: </span> html5, css3, javascript, jquery, bootstrap, skrollr plug-in <br><br>
-                            <a href="http://penndrones.com/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            <a href="http://penndrones.com/" class="effectBtn-default btn-lg" title="View Website" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
                             
-                            <a href="https://github.com/penndrones/penndrones.github.io" class="effectBtn-default btn-lg" title="View Code"><span class="darker">>_</span></a>
+                            <a href="https://github.com/penndrones/penndrones.github.io" class="effectBtn-default btn-lg" title="View Code" target="_blank"><span class="darker">>_</span></a>
                             </p>
                             
                         </div>
@@ -394,7 +512,7 @@
                     <img src="./img/PennDrones1.jpg" class="img-responsive"  alt="Penn Drones Website, a website Spiro designed for the club Penn Drones at the University of Pennsylvania." title="Penn Drones Website">
                 </div>
 
-                    <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </span><br>
+                    <p class="justified">A parallax single-page scroll website designed for the club Penn Drones at the University of Pennsylvania.  The website contains an assortment of animations that respond according to mouse scrolling.  The site also contains a mobile-friendly version.  </p><br>
                 </div>
 
             <div class="col-sm-5">
@@ -410,9 +528,9 @@
                     <div class="child-right">
                         <div class="centerText">
                         <p><span class="darker">Tools: </span> html5, css3, javascript, jquery, bootstrap, parallax.js plug-in<br><br>
-                            <a href="http://www.seas.upenn.edu/~ekn/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            <a href="http://www.seas.upenn.edu/~ekn/" class="effectBtn-default btn-lg" title="View Website" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
                             
-                            <a href="https://github.com/spirometaxas/HKN-Lambda-Chapter-Website" class="effectBtn-default btn-lg" title="View Code"><span class="darker">>_</span></a>
+                            <a href="https://github.com/spirometaxas/HKN-Lambda-Chapter-Website" class="effectBtn-default btn-lg" title="View Code" target="_blank"><span class="darker">>_</span></a>
                             </p>
                             
                         </div>
@@ -433,7 +551,7 @@
         <!-- WEBSITES ROW 1 END -->
         
         <!-- WEBSITES ROW 2 START -->
-        <div class="row">
+        <div class="row scrollpoint">
                 <div class="col-sm-1"> </div>
                 
                 <div class="col-sm-5">
@@ -449,7 +567,7 @@
                     <div class="child-right">
                         <div class="centerText">
                         <p><span class="darker">Tools: </span> Wix Website Editor<br><br>
-                            <a href="http://www.globaldevelopmentco.org/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            <a href="http://www.globaldevelopmentco.org/" class="effectBtn-default btn-lg" title="View Website" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
                             </p>
                             
                         </div>
@@ -460,7 +578,7 @@
                     <img src="./img/GlobalDevelopmentCollaborativeImage3.jpg" class="img-responsive"  alt="Global Development Collaborative Website, a website Spiro designed for Global Development Collaborative." title="Global Development Collaborative Website">
                 </div>
 
-                    <p class="justified">A formal website designed for Global Development Collaborative Inc.   Built using Wix.com, the website contains parallax background images, a running blog with content filters, image corousels/galleries, and a contact/subscription form.</span><br>
+                    <p class="justified">A formal website designed for Global Development Collaborative Inc.   Built using Wix.com, the website contains parallax background images, a running blog with content filters, image corousels/galleries, and a contact/subscription form.</p><br>
                 </div>
 
             <div class="col-sm-5">
@@ -476,9 +594,9 @@
                     <div class="child-right">
                         <div class="centerText">
                         <p><span class="darker">Tools: </span> html5, css3, javascript, jquery, bootstrap<br><br>
-                            <a href="http://nscsupenn.github.io/" class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></a>
+                            <a href="http://nscsupenn.github.io/" class="effectBtn-default btn-lg" title="View Website" target="_blank"><span class="glyphicon glyphicon-search"></span></a>
                             
-                            <a href="https://github.com/nscsupenn/nscsupenn.github.io" class="effectBtn-default btn-lg" title="View Code"><span class="darker">>_</span></a>
+                            <a href="https://github.com/nscsupenn/nscsupenn.github.io" class="effectBtn-default btn-lg" title="View Code" target="_blank"><span class="darker">>_</span></a>
                             </p>
                             
                         </div>
@@ -520,7 +638,7 @@
             
             
             <!-- HACKATHON ROW 1 START -->
-            <div class="row">
+            <div class="row scrollpoint">
                 <div class="col-sm-1"> </div>
                 
                 <div class="col-sm-5">
@@ -537,9 +655,9 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/penninsula"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/penninsula" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <a href="https://www.youtube.com/watch?v=fl_GN63KdL4"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button> </a>
+                                    <a href="https://www.youtube.com/watch?v=fl_GN63KdL4" target="_blank"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button> </a>
                                     </div>
                                 </div>
                             </div>
@@ -550,7 +668,9 @@
                     <img src="./img/PenninsulaImage6.jpg" class="img-responsive"  alt="Penninsula, Spiro's project for PennApps Spring 2016." title="Penninsula">
                 </div>
                     
-                    <p class="justified">Penninsula is an iOS app that helps patients monitor their diabetes.  Penninsula first helps patients detect symptoms of neuropathic foot ulcers through image processing and machine learning algorithms.  Moreover, Penninsula helps patient control their diet by notifying them whether a particular food is healthy based on their current blood levels.  Numerous reminders are also provided.  <br> <span class="darker">Penninsula recieved "The Berkman Innovation Fund Award" for further development.</span></p> 
+                    <p class="justified">Penninsula is an iOS app that helps patients monitor their diabetes.  Penninsula first helps patients detect symptoms of neuropathic foot ulcers through image processing and machine learning algorithms.  Moreover, Penninsula helps patient control their diet by notifying them whether a particular food is healthy based on their current blood levels.  Numerous reminders are also provided. <br>
+                             <span class="darker award-text-clip award-text-colors"> <img src="./img/icons/prize.png" width=30 height=30> Penninsula recieved "The Berkman Innovation Fund Award" for further development.</span>
+                    </p>
                 </div>
                 
                 <div class="col-sm-5">
@@ -567,9 +687,9 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/cinemagic"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/cinemagic" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <a href="https://www.youtube.com/watch?v=KuUpS4TfJsc"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button></a>
+                                    <a href="https://www.youtube.com/watch?v=KuUpS4TfJsc" target="_blank"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button></a>
                                     </div>
                                 </div>
                             </div>
@@ -581,7 +701,7 @@
                 </div>
                     
 
-                    <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  Language processing helps confirm term accuracy.  <br> <span class="darker">CINEMAGIC won the "Best Use of Video" award at PennApps X</span><br>
+                    <p class="justified">CINEMAGIC is a web application that performs search-by-image within YouTube videos.  As a result, if the user wishes to find when a specific object appears visually within a video, then he/she simply needs to type the name of that object into Cinemagic, and Cinemagic will give the times where that object appears in the video.  Language processing helps confirm term accuracy.  <br> <span class="darker award-text-clip award-text-colors-2"> <img src="./img/icons/prize.png" width=30 height=30> CINEMAGIC won the "Best Use of Video" award at PennApps X</span></p><br>
  
                 </div>   
                 
@@ -590,7 +710,7 @@
             <!-- HACKATHON ROW 1 END -->
     
             <!-- HACKATHON ROW 2 START -->
-            <div class="row">
+            <div class="row scrollpoint">
                 <div class="col-sm-1"> </div>
                 
                 <div class="col-sm-5">
@@ -607,9 +727,9 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/travelsafe"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/travelsafe" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <a href="https://www.youtube.com/watch?v=vGUiADditRE"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button></a>
+                                    <a href="https://www.youtube.com/watch?v=vGUiADditRE" target="_blank"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button></a>
                                     </div>
                                 </div>
                             </div>
@@ -637,9 +757,9 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/type-right"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/type-right" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
-                                    <a href="https://www.youtube.com/watch?v=VaRUQCRiUpE"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button> </a>
+                                    <a href="https://www.youtube.com/watch?v=VaRUQCRiUpE" target="_blank"><button class="effectBtn-default btn-lg" title="View Video"><span class="glyphicon glyphicon-facetime-video"></span></button> </a>
                                     </div>
                                 </div>
                             </div>
@@ -656,7 +776,7 @@
             <!-- HACKATHON ROW 2 END -->
             
             <!-- HACKATHON ROW 3 START -->
-            <div class="row">
+            <div class="row scrollpoint">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-5">
                     <h1>
@@ -672,7 +792,7 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/kinect-vision-aid"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/kinect-vision-aid" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
                                     </div>
                                 </div>
@@ -700,7 +820,7 @@
                                     </p>
                                     
                                     <div class="buttons btn-group">
-                                    <a href="http://devpost.com/software/mealsteal"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
+                                    <a href="http://devpost.com/software/mealsteal" target="_blank"><button class="effectBtn-default btn-lg" title="View Website"><span class="glyphicon glyphicon-search"></span></button> </a>
                             
                                     </div>
                                 </div>
@@ -740,7 +860,7 @@
         </div>
         
         <!-- FOR CLASS ROW 1 START -->
-        <div class="row">
+        <div class="row scrollpoint">
                 <div class="col-sm-1"></div>
             
             
@@ -764,7 +884,7 @@
                 <div class="hidden-sm hidden-md hidden-lg">
                     <img src="./img/AhaeStackImage1.jpg" class="img-responsive"  alt="Volunteer Tracking App, Spiro's team project for CIS350." title="AhaeStack">
                 </div>                    
-                    <p class="justified">A search engine developed from scratch.  Data was obtained by crawing 1,000,000 websites using a 3-node distributed crawler on AWS, and stored using MongoDB.  Indexing involved an 8-node distributed indexer on AWS using Hadoop and HDFS.  Term and document frequencies were computed for fancy and non-fancy words, and the PageRank algorithm was applied to weigh the results.  Front-end features include spell-check, voice search, page previews, and numerous widgets.  The project also includes an Arduino Internet of Things component.  <br> <span class="darker">AhaeStack won the "Google Award" for best CIS555 final project.</span></p>
+                    <p class="justified">A search engine developed from scratch.  Data was obtained by crawing 1,000,000 websites using a 3-node distributed crawler on AWS, and stored using MongoDB.  Indexing involved an 8-node distributed indexer on AWS using Hadoop and HDFS.  Term and document frequencies were computed for fancy and non-fancy words, and the PageRank algorithm was applied to weigh the results.  Front-end features include spell-check, voice search, page previews, and numerous widgets.  The project also includes an Arduino Internet of Things component.  <br> <span class="darker award-text-clip award-text-colors"> <img src="./img/icons/prize.png" width=30 height=30> AhaeStack won the "Google Award" for best CIS555 final project.</span></p>
                 </div>
             
                 <div class="col-sm-5">
@@ -794,7 +914,7 @@
         <!-- FOR CLASS ROW 1 END -->
     
         <!-- FOR CLASS ROW 2 START -->
-        <div class="row">
+        <div class="row scrollpoint">
                 <div class="col-sm-1"></div>
             
             
@@ -865,13 +985,20 @@
         <div class="row featurette hidden-sm hidden-md hidden-lg">
 
           <ul class="list-inline banner-social-buttons">
-                    <li><a href="https://www.facebook.com/people/Spiro-Metaxas/100004540996111" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    <li>
+                        <a href="https://www.linkedin.com/in/spiro-metaxas" target="_blank" class="btn btn-default btn-lg">
+                            <i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span>
+                        </a>
                     </li>
-                    <li><a href="http://www.linkedin.com/pub/spiro-metaxas/99/957/554" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                    <li>
+                        <a href="https://www.facebook.com/people/Spiro-Metaxas/100004540996111" target="_blank" class="btn btn-default btn-lg">
+                            <i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span>
+                        </a>
                     </li>
-                    <li><a href="https://plus.google.com/114163671896480645682/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                    <li><a href="https://github.com/spirometaxas" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li>
+                        <a href="https://github.com/spirometaxas" target="_blank" class="btn btn-default btn-lg">
+                            <i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Github</span>
+                        </a>
                     </li>
             </ul>
 
@@ -891,19 +1018,15 @@
                           
                           <div class="child-right-contact">
                               <div class="buttonSpace" id="apps">
-                                  <a href="https://www.facebook.com/people/Spiro-Metaxas/100004540996111"> <button class="appButton">
+                                  <a href="https://www.linkedin.com/in/spiro-metaxas" target="_blank"> <button class="appButton"> 
+                                      <img src="img/linkedin-logo2.png" class="img-responsive tapApp"> LinkedIn
+                                  </button> </a>
+
+                                  <a href="https://www.facebook.com/people/Spiro-Metaxas/100004540996111" target="_blank"> <button class="appButton">
                                       <img src="img/facebook-logo2.png" class="img-responsive tapApp"> Facebook
                                   </button> </a>
                                   
-                                  <a href="https://www.linkedin.com/pub/spiro-metaxas/99/957/554"> <button class="appButton"> 
-                                      <img src="img/linkedin-logo2.png" class="img-responsive tapApp"> Linkedin
-                                  </button> </a>
-                                  
-                                  <a href="https://plus.google.com/114163671896480645682/posts"> <button class="appButton">
-                                      <img src="img/googleplusLogo2.png" class="img-responsive tapApp"> Google+
-                                  </button> </a>
-                                  
-                                  <a href="https://github.com/spirometaxas"> <button class="appButton">
+                                  <a href="https://github.com/spirometaxas" target="_blank"> <button class="appButton">
                                       <img src="img/GithubLogo2.png" class="img-responsive tapApp"> Github
                                   </button> </a>
                               </div>
@@ -975,7 +1098,7 @@
             </div>
         </div>
           
-          <p>&copy; 2017 Spiro Metaxas</p>
+          <p>&copy; 2020 Spiro Metaxas</p>
 
       </div>
         
@@ -983,7 +1106,7 @@
 
     <!-- Core JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+    <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
@@ -991,6 +1114,8 @@
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!--<script src="js/fss.min.js"></script>
     <script src="js/example.js"></script>-->
+
+    <script src="js/waypoints.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/personalWebsiteScripts.js"></script>
@@ -1090,27 +1215,27 @@
     <script type="text/javascript">
         var occur = false;
         var currentIndex = 0;
-        
+
         var difSize = false;
 
             $('.carousel').bind('slid', function (e) {
-                if (!occur) {
+                currentIndex = $('div.active').index();
+
+                if (!occur && currentIndex == 2) {
                     //test();
                     initialise();
                     occur = true;
                 }
-                
-                currentIndex = $('div.active').index();
-                
-                if (difSize && currentIndex == 1) {
+
+                if (occur && difSize && currentIndex == 2) {
                     resize(container.offsetWidth, container.offsetHeight);
                     render();
                     difSize = false;
                 }
-                
+
             });
-        
-        
+
+
         $( window ).resize(function() {
             difSize = true;
         });
@@ -1149,6 +1274,232 @@
                          "retina_detect":true});
         
         </script>
+
+    <script>
+        $(document).ready(function() {
+
+            var shuffleNumbers = function(numbers) {
+                for (let i = 0; i < 100; i++) {
+                    let index1 = Math.floor(Math.random() * numbers.length);
+                    let index2 = Math.floor(Math.random() * numbers.length);
+                    let temp = numbers[index1];
+                    numbers[index1] = numbers[index2];
+                    numbers[index2] = temp;
+                }
+                return numbers;
+            }
+
+            var getBalancedBinaryText = function(text, padding) {
+                var textLength = text.length;
+                var replaceText = '';
+                var numbers = [];
+                var textLengthNoSpaces = 0;
+                for (let i = 0; i < textLength; i++) {
+                    if (text.charAt(i) != ' ') {
+                        textLengthNoSpaces++;
+                    }
+                }
+                for (let i = 0; i < textLengthNoSpaces; i++) {
+                    if (i < textLengthNoSpaces / 2) {
+                        numbers.push('0');
+                    } else {
+                        numbers.push('1');
+                    }
+                }
+                numbers = shuffleNumbers(numbers);
+                var currentIndex = 0;
+                for (let i = 0; i < textLength; i++) {
+                    if (text.charAt(i) === ' ') {
+                        replaceText = replaceText + ' ';
+                        continue;
+                    }
+                    replaceText = replaceText + numbers[currentIndex];
+                    currentIndex++;
+                }
+                // padding
+                for (let i = 0; i < padding; i++) {
+                    if (i % 3 == 0) {
+                        replaceText = replaceText + ' ';
+                    }
+                    if (Math.random() < 0.5) {
+                        replaceText = replaceText + '0';
+                    } else {
+                        replaceText = replaceText + '1';
+                    }
+                }
+                return replaceText;
+            }
+
+            var getBalancedBinaryStepText = function(current, actual, ratio, padding) {
+                var textLength = actual.length;
+                var replaceText = '';
+                var numbers = [];
+                var possibleIndices = [];
+
+                for (let i = 0; i < textLength; i++) {
+                    if (current.charAt(i) === '0' || current.charAt(i) === '1') {
+                        possibleIndices.push(i);
+                    }
+                }
+                possibleIndices = shuffleNumbers(possibleIndices);
+                var indicesToMask = [];
+                for (let i = 0; i < possibleIndices.length; i++) {
+                    if ((i > possibleIndices.length * ratio) && (i < possibleIndices.length)) {
+                        indicesToMask.push(possibleIndices[i]);
+                    }
+                }
+
+                for (let i = 0; i < indicesToMask.length; i++) {
+                    if (i < indicesToMask.length / 2) {
+                        numbers.push('0');
+                    } else {
+                        numbers.push('1');
+                    }
+                }
+                numbers = shuffleNumbers(numbers);
+
+                var currentNumber = 0;
+                for (let i = 0; i < textLength; i++) {
+                    if (indicesToMask.indexOf(i) >= 0) {
+                        replaceText = replaceText + numbers[currentNumber];
+                        currentNumber++;
+                    } else {
+                        replaceText = replaceText + actual.charAt(i);
+                    }
+                }
+                // padding
+                for (let i = 0; i < padding; i++) {
+                    if (i % 3 == 0) {
+                        replaceText = replaceText + ' ';
+                    }
+                    if (Math.random() > 0.5) {
+                        replaceText = replaceText + '0';
+                    } else {
+                        replaceText = replaceText + '1';
+                    }
+                }
+                return replaceText;
+            }
+
+            var revealText = function(itemId, actualText, ratios, padding) {
+                var currentRatio = 0;
+                var currentText = $(itemId).text();
+                var textRevealTimer = setInterval(function() {
+                    var newText = getBalancedBinaryStepText(currentText, actualText, ratios[currentRatio], (1.0 - ratios[currentRatio]) * padding);
+                    $(itemId).text(newText);
+                    currentRatio++;
+                    currentText = newText;
+                    if (currentRatio >= ratios.length) {
+                        clearTimeout(textRevealTimer);
+                    }
+                }, 80);
+            }
+
+            var isSafari = function() {
+                let userAgentString = navigator.userAgent;
+                let safariAgent = userAgentString.indexOf("Safari") > -1;
+                let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+                if ((chromeAgent) && (safariAgent)) {
+                    safariAgent = false;
+                }
+                return safariAgent;
+            }
+
+            if (!isSafari()) {
+                var slide3Text = $('#slide-3-description').text();
+                var slide4Text = $('#slide-4-description').text();
+                $('.carousel').bind('slid', function (e) {
+                    var currentSlideIndex = $('div.active').index();
+                    if (currentSlideIndex == 2) {
+                        revealText('#slide-3-description', slide3Text, [0.0, 0.0, 0.0, 0.2, 0.2, 0.3, 0.5, 1.1], 0);
+                    } else {
+                        $('#slide-3-description').text(getBalancedBinaryText(slide3Text, 0));
+                    }
+                    if (currentSlideIndex == 3) {
+                        revealText('#slide-4-description', slide4Text, [0.0, 0.0, 0.0, 0.2, 0.2, 0.3, 0.5, 1.1], 0);
+                    } else {
+                        $('#slide-4-description').text(getBalancedBinaryText(slide4Text, 0));
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        var runTypingLoad = function(itemName) {
+            $(itemName).each(function() {
+                let item = $(this);
+                let startText = item.attr("data");
+                let currentIndex = 0;
+                var textTypingTimer = setInterval(function() {
+                    if (currentIndex <= startText.length) {
+                        item.text(startText.substring(0, currentIndex) + "|");
+                    } else {
+                        clearTimeout(textTypingTimer);
+                        var blinkCounter = 0;
+                        var cursorTimeout = setInterval(function() {
+                            if (blinkCounter % 2 == 0) {
+                                item.text(startText);
+                            } else {
+                                item.text(startText + "|");
+                            }
+                            if (blinkCounter >= 4) {
+                                clearTimeout(cursorTimeout);
+                                item.text(startText);
+                            }
+                            blinkCounter++;
+                        }, 400);
+                    }
+                    currentIndex++;
+                }, 100);
+            });
+        };
+
+        var section1Complete = false;
+
+        $(document).ready(function() {
+            var item = $('#typingSection');
+            var itemTop = item.offset().top,
+                itemHeight = item.outerHeight(),
+                windowHeight = $(window).height(),
+                windowScroll = $(this).scrollTop();
+            if (windowScroll > (itemTop + (itemHeight / 2) - windowHeight)) {
+                section1Complete = true;
+            } else {
+                $('.typingLoad span').each(function() {
+                    $(this).text('|');
+                });
+            }
+        });
+
+        $(window).scroll(function() {
+            if (section1Complete) {
+                return;
+            }
+            var item = $('#typingSection');
+            var itemTop = item.offset().top,
+                itemHeight = item.outerHeight(),
+                windowHeight = $(window).height(),
+                windowScroll = $(this).scrollTop();
+            if (windowScroll > (itemTop + (itemHeight / 2) - windowHeight) && !section1Complete) {
+                section1Complete = true;
+                runTypingLoad('.typingLoad span');
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {  
+            $('.scrollpoint').waypoint(function() {
+                if (!$(this).hasClass('active')) {
+                    $(this).addClass('active');
+                    $(this).addClass('animated fadeInUpBig');
+                }
+            }, {
+                offset:'90%'
+            });
+        });
+    </script>
             
     
     <!--<script type="text/javascript">
