@@ -1228,7 +1228,7 @@
 
         var difSize = false;
 
-            $('.carousel').bind('slid', function (e) {
+            $('.carousel').bind('slid.bs.carousel', function (e) {
                 currentIndex = $('div.active').index();
 
                 if (!occur && currentIndex == 2) {
@@ -1418,7 +1418,7 @@
             if (!isSafari()) {
                 var slide3Text = $('#slide-3-description').text();
                 var slide4Text = $('#slide-4-description').text();
-                $('.carousel').bind('slid', function (e) {
+                $('.carousel').bind('slid.bs.carousel', function (e) {
                     var currentSlideIndex = $('div.active').index();
                     if (currentSlideIndex == 2) {
                         revealText('#slide-3-description', slide3Text, [0.0, 0.0, 0.0, 0.2, 0.2, 0.3, 0.5, 1.1], 0);
