@@ -180,7 +180,11 @@
   function createMesh() {
     scene.remove(mesh);
     renderer.clear();
-    geometry = new FSS.Plane(MESH.width * renderer.width, MESH.height * renderer.height, MESH.segments, MESH.slices);
+    if (renderer.width < 600) {
+      geometry = new FSS.Plane(MESH.width * renderer.width, MESH.height * renderer.height, 6, 3);
+    } else {
+      geometry = new FSS.Plane(MESH.width * renderer.width, MESH.height * renderer.height, MESH.segments, MESH.slices);
+    }
     material = new FSS.Material(MESH.ambient, MESH.diffuse);
     mesh = new FSS.Mesh(geometry, material);
     scene.add(mesh);
