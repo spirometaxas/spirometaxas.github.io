@@ -615,9 +615,18 @@ a:focus {
   }
 }
 
-.photoBackground {
-    background-image: url(../img/DSC00094-Space2.png);
+@media (min-width: 767px) {
+    .photoBackground {
+        background-image: url(../img/DSC00094-Space2.png);
+    }
 }
+
+@media (max-width: 767px) {
+    .photoBackground {
+        background-color: rgba(234, 232, 233, 1.0);
+    }
+}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -776,7 +785,7 @@ a:focus {
     font-weight: bold;
     margin-left: 0px;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
     max-width: 500px;
     color: rgba(0, 0, 0, 0.83);
