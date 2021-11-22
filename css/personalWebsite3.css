@@ -284,6 +284,11 @@ a:focus {
     font-weight: 900;
 }
 
+.darker-blue {
+  color: rgba(10, 93, 145, 0.77);
+  font-weight: 900;
+}
+
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
