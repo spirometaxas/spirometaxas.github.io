@@ -671,8 +671,12 @@ a:focus {
     left: -9999px;
     margin: 0 auto;
     align-content: center;
-    /*max-width: none;*/
-    height: 400px; 
+    max-width: none;
+    height: 400px;
+  }
+
+  .carousel-inner > .item > .profile {
+    overflow: hidden;
   }
     
   .carousel-inner > .item > .other > img {
@@ -704,7 +708,7 @@ a:focus {
 
 .first-slide-caption h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;  
   font-size: 30px;
   line-height: 1.4;
   font-weight: bold;
@@ -777,7 +781,7 @@ a:focus {
   }
 
   .carousel-caption-skyline h1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .carousel-caption-skyline p {
