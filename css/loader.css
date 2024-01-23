@@ -1273,6 +1273,12 @@
     margin-top:15%;
 }
 
+@media(max-width:767px) {
+    .keyboard {
+        margin-top:55%;
+    }
+}
+
 .loadingText {
     display:inline-block;
     min-width:10px;
