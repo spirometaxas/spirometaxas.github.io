@@ -256,6 +256,11 @@ p {
     /*line-height: 150%;*/
 }
 
+.disclaimer {
+    text-align: center;
+    color: rgb(180, 180, 180);
+}
+
 @media(max-width:767px) {
     .justified {
         text-align: center;
